@@ -1,7 +1,7 @@
-package com.kampherbeek.art.handlers.impl;
+package com.kampherbeek.art.datetime.impl;
 
-import com.kampherbeek.art.calculators.se.DateTimeCalculator;
-import com.kampherbeek.art.handlers.DateTimeHandler;
+import com.kampherbeek.art.datetime.DateTimeCalculator;
+import com.kampherbeek.art.datetime.DateTimeHandler;
 import com.kampherbeek.art.util.conversions.DateTimeConversions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -15,8 +15,11 @@ public class DateTimeHandlerImpl implements DateTimeHandler {
     @Autowired
     private DateTimeCalculator dateTimeCalculator;
     @Override
-    public double calculateJdNr(String dateTime) {
+    public String calculateJdNr(String dateTime) {
         SweDate sweDate = dateTimeConversions.textToSweDate(dateTime);
-        return dateTimeCalculator.calcJdNr(sweDate);
+        //return dateTimeCalculator.calcJdNr(sweDate);
+        double jdNr = dateTimeCalculator.calcJdNr(sweDate);
+        Double jdNrObject = new Double(jdNr);
+        return jdNrObject.toString();
     }
 }

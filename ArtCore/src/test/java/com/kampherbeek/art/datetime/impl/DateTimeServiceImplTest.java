@@ -1,7 +1,6 @@
-package com.kampherbeek.art.services.impl;
+package com.kampherbeek.art.datetime.impl;
 
-import com.kampherbeek.art.handlers.DateTimeHandler;
-import com.kampherbeek.art.services.DateTimeService;
+import com.kampherbeek.art.datetime.DateTimeHandler;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -20,8 +19,8 @@ public class DateTimeServiceImplTest {
     private DateTimeHandler dateTimeHandlerMock = Mockito.mock(DateTimeHandler.class);
     @InjectMocks
     private DateTimeServiceImpl dateTimeService;
-    private final double jdnr = 2123456.7;
-    private final double margin = 0.000000001;
+    private final String jdnr = "2123456.7";
+
 
     @Before
      public void setUp() {
@@ -29,6 +28,6 @@ public class DateTimeServiceImplTest {
     }
     @Test
     public void testGetJdNr() throws Exception {
-        assertEquals(jdnr, dateTimeService.getJdNr("2000-01-01 00:00:00"), margin);
+        assertEquals(jdnr, dateTimeService.getJdNr("2000-01-01 00:00:00"));
     }
 }

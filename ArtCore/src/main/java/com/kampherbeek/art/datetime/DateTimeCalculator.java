@@ -1,4 +1,4 @@
-package com.kampherbeek.art.calculators.se;
+package com.kampherbeek.art.datetime;
 
 import org.joda.time.DateTime;
 import swisseph.SweDate;

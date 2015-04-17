@@ -1,9 +1,9 @@
-package com.kampherbeek.art.services;
+package com.kampherbeek.art.datetime;
 
 
 import org.springframework.stereotype.Component;
 
 public interface DateTimeService {
 
-    double getJdNr(String dateTime);
+    String getJdNr(String dateTime);
 }

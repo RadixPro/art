@@ -1,0 +1,13 @@
+<html xmlns:concordion="http://www.concordion.org/2007/concordion">
+<head lang="en">
+    <title>Integration tests for Date and Time</title>
+</head>
+<body>
+
+The value for dateTime <span concordion:set="#datetime">1900-01-01 00:00:00</span>
+will be:
+<span concordion:assertEquals="getJdNr(#datetime)"> 2415020.5</span>
+
+
+</body>
+</html>

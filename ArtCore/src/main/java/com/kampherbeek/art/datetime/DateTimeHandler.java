@@ -1,4 +1,4 @@
-package com.kampherbeek.art.handlers;
+package com.kampherbeek.art.datetime;
 
 import org.springframework.stereotype.Component;
 
@@ -7,5 +7,5 @@ import org.springframework.stereotype.Component;
  */
 public interface DateTimeHandler {
 
-    double calculateJdNr(String dateTime);
+    String calculateJdNr(String dateTime);
 }

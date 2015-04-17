@@ -1,7 +1,7 @@
-package com.kampherbeek.art.calculators.se.impl;
+package com.kampherbeek.art.datetime.impl;
 
 import com.kampherbeek.art.ArtCoreApplication;
-import com.kampherbeek.art.calculators.se.DateTimeCalculator;
+import com.kampherbeek.art.datetime.DateTimeCalculator;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,8 +1,7 @@
-package com.kampherbeek.art.services.impl;
+package com.kampherbeek.art.datetime.impl;
 
-import com.kampherbeek.art.handlers.DateTimeHandler;
-import com.kampherbeek.art.rest.DateTimeController;
-import com.kampherbeek.art.services.DateTimeService;
+import com.kampherbeek.art.datetime.DateTimeHandler;
+import com.kampherbeek.art.datetime.DateTimeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -13,8 +12,9 @@ public class DateTimeServiceImpl implements DateTimeService {
     private DateTimeHandler dateTimeHandler;
 
     @Override
-    public double getJdNr(String dateTime) {
+    public String getJdNr(String dateTime) {
 
         return dateTimeHandler.calculateJdNr(dateTime);
+
     }
 }

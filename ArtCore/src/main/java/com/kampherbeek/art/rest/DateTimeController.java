@@ -1,24 +1,19 @@
 package com.kampherbeek.art.rest;
 
-import com.kampherbeek.art.services.DateTimeService;
+import com.kampherbeek.art.datetime.DateTimeService;
+import com.kampherbeek.art.datetime.model.DateTimeValues;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
-@Controller
+@RestController
 public class DateTimeController {
 @Autowired
 private DateTimeService dateTimeService;
 
-    @RequestMapping(
-            value = "/lease/party/{systemCode}/{systemId}",
-            method = RequestMethod.GET,
-            produces = "application/json; charset=UTF-8")
-    @ResponseBody
-    public double getJdnr(@PathVariable("dateTime") final String dateTime) {
-        return dateTimeService.getJdNr(dateTime);
+    @RequestMapping("/datetime/jdnr")
+    public DateTimeValues getJdnr(@RequestParam("datetime") final String dateTime) {
+        String jdNr = dateTimeService.getJdNr(dateTime);
+        return new DateTimeValues(jdNr);
     }
 }

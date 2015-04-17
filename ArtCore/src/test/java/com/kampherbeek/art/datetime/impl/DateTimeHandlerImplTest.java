@@ -1,6 +1,6 @@
-package com.kampherbeek.art.handlers.impl;
+package com.kampherbeek.art.datetime.impl;
 
-import com.kampherbeek.art.calculators.se.DateTimeCalculator;
+import com.kampherbeek.art.datetime.DateTimeCalculator;
 import com.kampherbeek.art.util.conversions.DateTimeConversions;
 import org.junit.Before;
 import org.junit.Test;
@@ -18,8 +18,8 @@ import static org.mockito.Mockito.when;
 public class DateTimeHandlerImplTest {
 
     private final String dateTimeText = "2000-01-01 00:00:00";
+    private final String jdnrTxt = "2123456.7";
     private final double jdnr = 2123456.7;
-    private final double margin = 0.000000001;
     @Mock
     private DateTimeConversions dateTimeConversionsMock;
     @Mock
@@ -38,7 +38,7 @@ public class DateTimeHandlerImplTest {
 
     @Test
     public void testCalculateJdNr() throws Exception {
-        assertEquals(jdnr, dateTimeHandler.calculateJdNr(dateTimeText), margin);
+        assertEquals(jdnrTxt, dateTimeHandler.calculateJdNr(dateTimeText));
     }
 
 
