@@ -15,11 +15,8 @@ public class DateTimeHandlerImpl implements DateTimeHandler {
     @Autowired
     private DateTimeCalculator dateTimeCalculator;
     @Override
-    public String calculateJdNr(String dateTime) {
+    public double calculateJdNr(String dateTime) {
         SweDate sweDate = dateTimeConversions.textToSweDate(dateTime);
-        //return dateTimeCalculator.calcJdNr(sweDate);
-        double jdNr = dateTimeCalculator.calcJdNr(sweDate);
-        Double jdNrObject = new Double(jdNr);
-        return jdNrObject.toString();
+        return dateTimeCalculator.calcJdNr(sweDate);
     }
 }

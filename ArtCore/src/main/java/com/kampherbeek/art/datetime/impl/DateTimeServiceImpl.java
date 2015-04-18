@@ -12,7 +12,7 @@ public class DateTimeServiceImpl implements DateTimeService {
     private DateTimeHandler dateTimeHandler;
 
     @Override
-    public String getJdNr(String dateTime) {
+    public double getJdNr(String dateTime) {
 
         return dateTimeHandler.calculateJdNr(dateTime);
 

@@ -4,9 +4,15 @@ import org.joda.time.DateTime;
 import swisseph.SweDate;
 
 /**
- * Created by jan on 13-4-15.
+ * Date and time related calculations.
  */
 public interface DateTimeCalculator {
 
+    /**
+     * Calculates Julian Day Number
+     * @param sweDate Date in the format yyyy-mm-dd hh:mm:ss
+     * @return calculated Julian Day Number
+     * TODO add support for calendar.
+     */
     double calcJdNr(SweDate sweDate);
 }

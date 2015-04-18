@@ -5,17 +5,17 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class DateTimeValues {
 
-    private String jdNr;
+    private double jdNr;
 
-    public DateTimeValues(String jdNr) {
+    public DateTimeValues(double jdNr) {
         this.jdNr = jdNr;
     }
 
     public DateTimeValues() {
-        // needs default cnstructor
+        // needs default constructor
     }
 
-    public String getJdNr() {
+    public double getJdNr() {
         return jdNr;
     }
 
