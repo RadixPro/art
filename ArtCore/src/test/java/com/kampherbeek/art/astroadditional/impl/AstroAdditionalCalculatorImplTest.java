@@ -2,19 +2,15 @@ package com.kampherbeek.art.astroadditional.impl;
 
 import com.kampherbeek.art.ArtCoreApplication;
 import com.kampherbeek.art.astroadditional.AstroAdditionalCalculator;
-import org.aspectj.lang.annotation.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.Mock;
-import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.SpringApplicationContextLoader;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import swisseph.SweDate;
-import swisseph.SwissEph;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(

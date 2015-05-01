@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
- * Servie for additional astronomical calculations.
+ * Service for additional astronomical calculations.
  */
 @Component
 public class AstroAdditionalServiceImpl implements AstroAdditionalService {
@@ -16,11 +16,12 @@ public class AstroAdditionalServiceImpl implements AstroAdditionalService {
 
     /**
      * Retrieve obliquity
+     *
      * @param jdnr Julian day number
      * @return obliquity
      */
     @Override
     public double getObliquity(String jdnr) {
-        return handler.calcObliquity(jdnr);
+        return handler.calcObliquity(Double.parseDouble(jdnr));
     }
 }

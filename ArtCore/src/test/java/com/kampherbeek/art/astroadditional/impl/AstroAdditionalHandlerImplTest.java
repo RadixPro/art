@@ -16,7 +16,7 @@ import static org.mockito.Mockito.when;
 @RunWith(MockitoJUnitRunner.class)
 public class AstroAdditionalHandlerImplTest {
 
-    private final String jdnr = "222333.444";
+    private final double jdnr = 222333.444;
     private final double margin = 0.000000001;
     private final double obliquity = 23.447;
     @Mock

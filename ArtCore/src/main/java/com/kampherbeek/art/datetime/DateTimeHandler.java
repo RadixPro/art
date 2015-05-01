@@ -1,6 +1,6 @@
 package com.kampherbeek.art.datetime;
 
-import org.springframework.stereotype.Component;
+import swisseph.SweDate;
 
 /**
  * Handles date and time related calculations.
@@ -9,9 +9,10 @@ public interface DateTimeHandler {
 
     /**
      * Handles calculation for julian data.
-     * @param dateTime Date in the format yyyy-mm-dd hh:mm:ss
-     * @return calculated Julian Day Number
+     *
+     * @param sweDate time and date.
+     * @return calculated Julian Day Number.
      * TODO add support for calendar.
      */
-    double calculateJdNr(String dateTime);
+    double calculateJdNr(SweDate sweDate);
 }

@@ -9,7 +9,7 @@ import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.web.client.RestTemplate;
 
-@SpringApplicationConfiguration(classes={ArtCoreApplication.class})
+@SpringApplicationConfiguration(classes = {ArtCoreApplication.class})
 @IntegrationTest
 @WebAppConfiguration
 @RunWith(ConcordionRunner.class)

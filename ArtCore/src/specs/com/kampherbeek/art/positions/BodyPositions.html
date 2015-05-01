@@ -1,0 +1,231 @@
+<html xmlns:concordion="http://www.concordion.org/2007/concordion">
+<head lang="en">
+    <title>Integration tests for Body Positions</title>
+</head>
+<body>
+
+The value for jdnr <span concordion:set="#jdnr">2434406.817713</span><br/>
+and for coordinateSystem <span concordion:set="#coord">ECLIPTICAL</span><br/>
+
+
+<table>
+    <tr>
+        <th>Body</th>
+        <th>Longitude</th>
+        <th>Latitude</th>
+        <th>Distance</th>
+        <th>Longitude speed</th>
+        <th>Latitude speed</th>
+        <th>Distance speed</th>
+    </tr>
+    <tr>
+        <td><span concordion:set="#planet">SUN</span></td>
+        <td><span concordion:assertEquals="getPosition(#jdnr, #planet, #coord)">309.118160</span></td>
+        <td><span concordion:assertEquals="getDeviation(#jdnr, #planet, #coord)">0.000029</span></td>
+        <td><span concordion:assertEquals="getDistance(#jdnr, #planet, #coord)">0.985016</span></td>
+        <td><span concordion:assertEquals="getPositionSpeed(#jdnr, #planet, #coord)">1.015303</span></td>
+        <td><span concordion:assertEquals="getDeviationSpeed(#jdnr, #planet, #coord)">-0.000050</span></td>
+        <td><span concordion:assertEquals="getDistanceSpeed(#jdnr, #planet, #coord)">0.000130</span></td>
+    </tr>
+    <tr>
+        <td><span concordion:set="#planet">MOON</span></td>
+        <td><span concordion:assertEquals="getPosition(#jdnr, #planet, #coord)">121.760832</span></td>
+        <td><span concordion:assertEquals="getDeviation(#jdnr, #planet, #coord)">0.976390</span></td>
+        <td><span concordion:assertEquals="getDistance(#jdnr, #planet, #coord)">0.002692</span></td>
+        <td><span concordion:assertEquals="getPositionSpeed(#jdnr, #planet, #coord)">12.006749</span></td>
+        <td><span concordion:assertEquals="getDeviationSpeed(#jdnr, #planet, #coord)">-1.093354</span></td>
+        <td><span concordion:assertEquals="getDistanceSpeed(#jdnr, #planet, #coord)">0.000013</span></td>
+    </tr>
+    <tr>
+        <td><span concordion:set="#planet">MERCURY</span></td>
+        <td><span concordion:assertEquals="getPosition(#jdnr, #planet, #coord)">305.867130</span></td>
+        <td><span concordion:assertEquals="getDeviation(#jdnr, #planet, #coord)">-2.041328</span></td>
+        <td><span concordion:assertEquals="getDistance(#jdnr, #planet, #coord)">1.415541</span></td>
+        <td><span concordion:assertEquals="getPositionSpeed(#jdnr, #planet, #coord)">1.687090</span></td>
+        <td><span concordion:assertEquals="getDeviationSpeed(#jdnr, #planet, #coord)">-0.023172</span></td>
+        <td><span concordion:assertEquals="getDistanceSpeed(#jdnr, #planet, #coord)">-0.001698</span></td>
+    </tr>
+    <tr>
+        <td><span concordion:set="#planet">VENUS</span></td>
+        <td><span concordion:assertEquals="getPosition(#jdnr, #planet, #coord)">356.009482</span></td>
+        <td><span concordion:assertEquals="getDeviation(#jdnr, #planet, #coord)">0.412786</span></td>
+        <td><span concordion:assertEquals="getDistance(#jdnr, #planet, #coord)">0.709366</span></td>
+        <td><span concordion:assertEquals="getPositionSpeed(#jdnr, #planet, #coord)">1.029315</span></td>
+        <td><span concordion:assertEquals="getDeviationSpeed(#jdnr, #planet, #coord)">0.100685</span></td>
+        <td><span concordion:assertEquals="getDistanceSpeed(#jdnr, #planet, #coord)">-0.007424</span></td>
+    </tr>
+    <tr>
+        <td><span concordion:set="#planet">MARS</span></td>
+        <td><span concordion:assertEquals="getPosition(#jdnr, #planet, #coord)">352.598467</span></td>
+        <td><span concordion:assertEquals="getDeviation(#jdnr, #planet, #coord)">-0.629672</span></td>
+        <td><span concordion:assertEquals="getDistance(#jdnr, #planet, #coord)">1.960699</span></td>
+        <td><span concordion:assertEquals="getPositionSpeed(#jdnr, #planet, #coord)">0.763184</span></td>
+        <td><span concordion:assertEquals="getDeviationSpeed(#jdnr, #planet, #coord)">0.013838</span></td>
+        <td><span concordion:assertEquals="getDistanceSpeed(#jdnr, #planet, #coord)">0.005811</span></td>
+    </tr>
+    <tr>
+        <td><span concordion:set="#planet">JUPITER</span></td>
+        <td><span concordion:assertEquals="getPosition(#jdnr, #planet, #coord)">41.952004</span></td>
+        <td><span concordion:assertEquals="getDeviation(#jdnr, #planet, #coord)">-0.979912</span></td>
+        <td><span concordion:assertEquals="getDistance(#jdnr, #planet, #coord)">4.855793</span></td>
+        <td><span concordion:assertEquals="getPositionSpeed(#jdnr, #planet, #coord)">0.079495</span></td>
+        <td><span concordion:assertEquals="getDeviationSpeed(#jdnr, #planet, #coord)">0.004656</span></td>
+        <td><span concordion:assertEquals="getDistanceSpeed(#jdnr, #planet, #coord)">0.016113</span></td>
+    </tr>
+    <tr>
+        <td><span concordion:set="#planet">SATURN</span></td>
+        <td><span concordion:assertEquals="getPosition(#jdnr, #planet, #coord)">207.257780</span></td>
+        <td><span concordion:assertEquals="getDeviation(#jdnr, #planet, #coord)">2.553576</span></td>
+        <td><span concordion:assertEquals="getDistance(#jdnr, #planet, #coord)">9.436993</span></td>
+        <td><span concordion:assertEquals="getPositionSpeed(#jdnr, #planet, #coord)">0.012030</span></td>
+        <td><span concordion:assertEquals="getDeviationSpeed(#jdnr, #planet, #coord)">0.004511</span></td>
+        <td><span concordion:assertEquals="getDistanceSpeed(#jdnr, #planet, #coord)">-0.016264</span></td>
+    </tr>
+    <tr>
+        <td><span concordion:set="#planet">URANUS</span></td>
+        <td><span concordion:assertEquals="getPosition(#jdnr, #planet, #coord)">105.563038</span></td>
+        <td><span concordion:assertEquals="getDeviation(#jdnr, #planet, #coord)">0.441752</span></td>
+        <td><span concordion:assertEquals="getDistance(#jdnr, #planet, #coord)">17.847858</span></td>
+        <td><span concordion:assertEquals="getPositionSpeed(#jdnr, #planet, #coord)">-0.038623</span></td>
+        <td><span concordion:assertEquals="getDeviationSpeed(#jdnr, #planet, #coord)">-0.000007</span></td>
+        <td><span concordion:assertEquals="getDistanceSpeed(#jdnr, #planet, #coord)">0.006584</span></td>
+    </tr>
+    <tr>
+        <td><span concordion:set="#planet">NEPTUNE</span></td>
+        <td><span concordion:assertEquals="getPosition(#jdnr, #planet, #coord)">203.882472</span></td>
+        <td><span concordion:assertEquals="getDeviation(#jdnr, #planet, #coord)">1.691068</span></td>
+        <td><span concordion:assertEquals="getDistance(#jdnr, #planet, #coord)">30.033324</span></td>
+        <td><span concordion:assertEquals="getPositionSpeed(#jdnr, #planet, #coord)">-0.002440</span></td>
+        <td><span concordion:assertEquals="getDeviationSpeed(#jdnr, #planet, #coord)">0.000998</span></td>
+        <td><span concordion:assertEquals="getDistanceSpeed(#jdnr, #planet, #coord)">-0.016769</span></td>
+    </tr>
+    <tr>
+        <td><span concordion:set="#planet">PLUTO</span></td>
+        <td><span concordion:assertEquals="getPosition(#jdnr, #planet, #coord)">142.361960</span></td>
+        <td><span concordion:assertEquals="getDeviation(#jdnr, #planet, #coord)">9.620794</span></td>
+        <td><span concordion:assertEquals="getDistance(#jdnr, #planet, #coord)">34.597761</span></td>
+        <td><span concordion:assertEquals="getPositionSpeed(#jdnr, #planet, #coord)">-0.023607</span></td>
+        <td><span concordion:assertEquals="getDeviationSpeed(#jdnr, #planet, #coord)">0.002381</span></td>
+        <td><span concordion:assertEquals="getDistanceSpeed(#jdnr, #planet, #coord)">-0.004788</span></td>
+    </tr>
+    <tr>
+        <td><span concordion:set="#planet">MEAN_NODE</span></td>
+        <td><span concordion:assertEquals="getPosition(#jdnr, #planet, #coord)">312.580226</span></td>
+        <td><span concordion:assertEquals="getDeviation(#jdnr, #planet, #coord)">0.000000</span></td>
+        <td><span concordion:assertEquals="getDistance(#jdnr, #planet, #coord)">0.002570</span></td>
+        <td><span concordion:assertEquals="getPositionSpeed(#jdnr, #planet, #coord)">-0.052942</span></td>
+        <td><span concordion:assertEquals="getDeviationSpeed(#jdnr, #planet, #coord)">0.000000</span></td>
+        <td><span concordion:assertEquals="getDistanceSpeed(#jdnr, #planet, #coord)">0.000000</span></td>
+    </tr>
+
+
+    <tr>
+        <td><span concordion:set="#planet">CHIRON</span></td>
+        <td><span concordion:assertEquals="getPosition(#jdnr, #planet, #coord)">286.328815</span></td>
+        <td><span concordion:assertEquals="getDeviation(#jdnr, #planet, #coord)">6.258475</span></td>
+        <td><span concordion:assertEquals="getDistance(#jdnr, #planet, #coord)">13.087803</span></td>
+        <td><span concordion:assertEquals="getPositionSpeed(#jdnr, #planet, #coord)">0.092123</span></td>
+        <td><span concordion:assertEquals="getDeviationSpeed(#jdnr, #planet, #coord)">0.003768</span></td>
+        <td><span concordion:assertEquals="getDistanceSpeed(#jdnr, #planet, #coord)">-0.004531</span></td>
+    </tr>
+
+</table>
+
+Positions for coordinateSystem <span concordion:set="#coord">EQUATORIAL</span><br/>
+<table>
+    <tr>
+        <th>Body</th>
+        <th>Right ascension</th>
+        <th>Declination</th>
+        <th>RA speed</th>
+        <th>Decl. speed</th>
+    </tr>
+    <tr>
+        <td><span concordion:set="#planet">SUN</span></td>
+        <td><span concordion:assertEquals="getPosition(#jdnr, #planet, #coord)">311.553638</span></td>
+        <td><span concordion:assertEquals="getDeviation(#jdnr, #planet, #coord)">-17.981519</span></td>
+        <td><span concordion:assertEquals="getPositionSpeed(#jdnr, #planet, #coord)">1.029603</span></td>
+        <td><span concordion:assertEquals="getDeviationSpeed(#jdnr, #planet, #coord)">0.267928</span></td>
+    </tr>
+    <tr>
+        <td><span concordion:set="#planet">MOON</span></td>
+        <td><span concordion:assertEquals="getPosition(#jdnr, #planet, #coord)">124.243811</span></td>
+        <td><span concordion:assertEquals="getDeviation(#jdnr, #planet, #coord)">20.726120</span></td>
+        <td><span concordion:assertEquals="getPositionSpeed(#jdnr, #planet, #coord)">12.247927</span></td>
+        <td><span concordion:assertEquals="getDeviationSpeed(#jdnr, #planet, #coord)">-3.753964</span></td>
+    </tr>
+    <tr>
+        <td><span concordion:set="#planet">MERCURY</span></td>
+        <td><span concordion:assertEquals="getPosition(#jdnr, #planet, #coord)">308.778548</span></td>
+        <td><span concordion:assertEquals="getDeviation(#jdnr, #planet, #coord)">-20.788865</span></td>
+        <td><span concordion:assertEquals="getPositionSpeed(#jdnr, #planet, #coord)">1.752640</span></td>
+        <td><span concordion:assertEquals="getDeviationSpeed(#jdnr, #planet, #coord)"> 0.398001</span></td>
+    </tr>
+    <tr>
+        <td><span concordion:set="#planet">VENUS</span></td>
+        <td><span concordion:assertEquals="getPosition(#jdnr, #planet, #coord)">356.174102</span></td>
+        <td><span concordion:assertEquals="getDeviation(#jdnr, #planet, #coord)">-1.207901</span></td>
+        <td><span concordion:assertEquals="getPositionSpeed(#jdnr, #planet, #coord)">0.904915</span></td>
+        <td><span concordion:assertEquals="getDeviationSpeed(#jdnr, #planet, #coord)">0.501063</span></td>
+    </tr>
+    <tr>
+        <td><span concordion:set="#planet">MARS</span></td>
+        <td><span concordion:assertEquals="getPosition(#jdnr, #planet, #coord)">353.452909</span></td>
+        <td><span concordion:assertEquals="getDeviation(#jdnr, #planet, #coord)">-3.516596</span></td>
+        <td><span concordion:assertEquals="getPositionSpeed(#jdnr, #planet, #coord)">0.696813</span></td>
+        <td><span concordion:assertEquals="getDeviationSpeed(#jdnr, #planet, #coord)">0.314403</span></td>
+    </tr>
+    <tr>
+        <td><span concordion:set="#planet">JUPITER</span></td>
+        <td><span concordion:assertEquals="getPosition(#jdnr, #planet, #coord)">39.821911</span></td>
+        <td><span concordion:assertEquals="getDeviation(#jdnr, #planet, #coord)">14.493598</span></td>
+        <td><span concordion:assertEquals="getPositionSpeed(#jdnr, #planet, #coord)">0.076698</span></td>
+        <td><span concordion:assertEquals="getDeviationSpeed(#jdnr, #planet, #coord)">0.028727</span></td>
+    </tr>
+    <tr>
+        <td><span concordion:set="#planet">SATURN</span></td>
+        <td><span concordion:assertEquals="getPosition(#jdnr, #planet, #coord)">206.226074</span></td>
+        <td><span concordion:assertEquals="getDeviation(#jdnr, #planet, #coord)">-8.116204</span></td>
+        <td><span concordion:assertEquals="getPositionSpeed(#jdnr, #planet, #coord)">0.012966</span></td>
+        <td><span concordion:assertEquals="getDeviationSpeed(#jdnr, #planet, #coord)">-0.000081</span></td>
+    </tr>
+    <tr>
+        <td><span concordion:set="#planet">URANUS</span></td>
+        <td><span concordion:assertEquals="getPosition(#jdnr, #planet, #coord)">106.942526</span></td>
+        <td><span concordion:assertEquals="getDeviation(#jdnr, #planet, #coord)">22.977832</span></td>
+        <td><span concordion:assertEquals="getPositionSpeed(#jdnr, #planet, #coord)">-0.041668</span></td>
+        <td><span concordion:assertEquals="getDeviationSpeed(#jdnr, #planet, #coord)">0.004471</span></td>
+    </tr>
+    <tr>
+        <td><span concordion:set="#planet">NEPTUNE</span></td>
+        <td><span concordion:assertEquals="getPosition(#jdnr, #planet, #coord)">202.736598</span></td>
+        <td><span concordion:assertEquals="getDeviation(#jdnr, #planet, #coord)">-7.697989</span></td>
+        <td><span concordion:assertEquals="getPositionSpeed(#jdnr, #planet, #coord)">-0.001919</span></td>
+        <td><span concordion:assertEquals="getDeviationSpeed(#jdnr, #planet, #coord)">0.001824</span></td>
+    </tr>
+    <tr>
+        <td><span concordion:set="#planet">PLUTO</span></td>
+        <td><span concordion:assertEquals="getPosition(#jdnr, #planet, #coord)">148.105553</span></td>
+        <td><span concordion:assertEquals="getDeviation(#jdnr, #planet, #coord)">23.134829</span></td>
+        <td><span concordion:assertEquals="getPositionSpeed(#jdnr, #planet, #coord)">-0.022891</span></td>
+        <td><span concordion:assertEquals="getDeviationSpeed(#jdnr, #planet, #coord)">0.010212</span></td>
+    </tr>
+    <tr>
+        <td><span concordion:set="#planet">MEAN_NODE</span></td>
+        <td><span concordion:assertEquals="getPosition(#jdnr, #planet, #coord)">315.046251</span></td>
+        <td><span concordion:assertEquals="getDeviation(#jdnr, #planet, #coord)">-17.036884</span></td>
+        <td><span concordion:assertEquals="getPositionSpeed(#jdnr, #planet, #coord)">-0.053128</span></td>
+        <td><span concordion:assertEquals="getDeviationSpeed(#jdnr, #planet, #coord)">-0.014919</span></td>
+    </tr>
+    <tr>
+        <td><span concordion:set="#planet">CHIRON</span></td>
+        <td><span concordion:assertEquals="getPosition(#jdnr, #planet, #coord)">286.922625</span></td>
+        <td><span concordion:assertEquals="getDeviation(#jdnr, #planet, #coord)">-16.234174</span></td>
+        <td><span concordion:assertEquals="getPositionSpeed(#jdnr, #planet, #coord)">0.094270</span></td>
+        <td><span concordion:assertEquals="getDeviationSpeed(#jdnr, #planet, #coord)">0.014412</span></td>
+    </tr>
+</table>
+
+
+</body>
+</html>

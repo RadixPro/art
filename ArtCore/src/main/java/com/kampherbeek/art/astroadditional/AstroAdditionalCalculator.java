@@ -1,6 +1,5 @@
 package com.kampherbeek.art.astroadditional;
 
-import org.springframework.stereotype.Component;
 import swisseph.SweDate;
 
 

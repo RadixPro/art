@@ -10,19 +10,20 @@ import swisseph.SweDate;
  * Additional astronomical calculations.
  */
 @Component
-public class AstroAdditionalHandlerImpl implements AstroAdditionalHandler{
+public class AstroAdditionalHandlerImpl implements AstroAdditionalHandler {
 
     @Autowired
     private AstroAdditionalCalculator calculator;
 
     /**
      * Handle the calculation of obliquity.
+     *
      * @param jdnr Julian day number
      * @return obliquity
      */
     @Override
-    public double calcObliquity(String jdnr) {
-        SweDate sweDate = new SweDate(Double.parseDouble(jdnr));
+    public double calcObliquity(double jdnr) {
+        SweDate sweDate = new SweDate(jdnr);
         return calculator.calcObliquity(sweDate);
     }
 }

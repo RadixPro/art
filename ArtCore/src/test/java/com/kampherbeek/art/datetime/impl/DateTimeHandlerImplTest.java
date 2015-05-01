@@ -31,14 +31,13 @@ public class DateTimeHandlerImplTest {
 
     @Before
     public void setUp() throws Exception {
-        when(dateTimeConversionsMock.textToSweDate(dateTimeText)).thenReturn(sweDateMock);
         when(dateTimeCalculatorMock.calcJdNr(anyObject())).thenReturn(jdnr);
 
     }
 
     @Test
     public void testCalculateJdNr() throws Exception {
-        assertEquals(jdnr, dateTimeHandler.calculateJdNr(dateTimeText), margin);
+        assertEquals(jdnr, dateTimeHandler.calculateJdNr(sweDateMock), margin);
     }
 
 

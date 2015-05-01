@@ -1,6 +1,5 @@
 package com.kampherbeek.art.util.conversions;
 
-import com.sun.javaws.exceptions.InvalidArgumentException;
 import org.springframework.stereotype.Component;
 import swisseph.SweDate;
 
@@ -22,7 +21,7 @@ public class DateTimeConversions {
      * @return the converted date
      */
     public SweDate textToSweDate(String dateTime) {
-        SweDate sweDate = null;
+        SweDate sweDate;
         if (dateTime.length() != LENGTH_DATE_TIME) {
             throw new InvalidParameterException("Incomplete dateTime: " + dateTime);
         }

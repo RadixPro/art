@@ -6,12 +6,11 @@ import org.concordion.integration.junit4.ConcordionRunner;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.IntegrationTest;
 import org.springframework.boot.test.SpringApplicationConfiguration;
-import org.springframework.data.domain.Page;
 import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.web.client.RestTemplate;
 
 
-@SpringApplicationConfiguration(classes={ArtCoreApplication.class})
+@SpringApplicationConfiguration(classes = {ArtCoreApplication.class})
 @IntegrationTest
 @WebAppConfiguration
 @RunWith(ConcordionRunner.class)

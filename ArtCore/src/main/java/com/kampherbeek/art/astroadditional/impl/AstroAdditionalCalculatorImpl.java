@@ -19,8 +19,9 @@ public class AstroAdditionalCalculatorImpl implements AstroAdditionalCalculator 
 
     /**
      * Calculate mean obliquity of the Ecliptic
-     * @param sweDate
-     * @return
+     *
+     * @param sweDate SweDate containing date and time
+     * @return value of mean obliquity
      */
     @Override
     public double calcObliquity(SweDate sweDate) {
