@@ -1,7 +1,7 @@
 package com.kampherbeek.art.endpoints;
 
-import com.kampherbeek.art.datetime.DateTimeService;
-import com.kampherbeek.art.datetime.model.DateTimeValues;
+import com.kampherbeek.art.domains.datetime.DateTimeService;
+import com.kampherbeek.art.domains.datetime.model.DateTimeValues;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;

@@ -1,7 +1,7 @@
 package com.kampherbeek.art.endpoints;
 
-import com.kampherbeek.art.astroadditional.AstroAdditionalService;
-import com.kampherbeek.art.astroadditional.model.AstroAdditionalValues;
+import com.kampherbeek.art.domains.astroadditional.AstroAdditionalService;
+import com.kampherbeek.art.domains.astroadditional.model.AstroAdditionalValues;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;

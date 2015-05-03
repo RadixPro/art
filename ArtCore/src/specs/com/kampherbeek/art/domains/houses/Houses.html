@@ -1,0 +1,332 @@
+<html xmlns:concordion="http://www.concordion.org/2007/concordion">
+<head lang="en">
+    <title>Integration tests for Houses</title>
+</head>
+<body>
+<h1>Houses</h1>
+<h2>Latitude north, longitude east</h2>
+
+Used values:<br/>
+jdnr <span concordion:set="#jdnr">2434406.817713</span><br/>
+latitude: <span concordion:set="#geoLat">52.216666667</span><br/>
+longitude: <span concordion:set="#geoLong">6.9</span><br/>
+
+<table>
+    <tr>
+        <th>System</th>
+        <th>MC</th>
+        <th>Asc</th>
+        <th colspan="12">cusps</th>
+    </tr>
+    <tr>
+        <td><span concordion:set="#system">NONE</span></td>
+        <td><span concordion:assertEquals="getMc(#jdnr, #geoLat, #geoLong, #system)">251.101812</span></td>
+        <td><span concordion:assertEquals="getAscendant(#jdnr, #geoLat, #geoLong, #system)">314.724111</span></td>
+        <td><span concordion:set="#index">1</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">(null)</span></td>
+        <td><span concordion:set="#index">2</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">(null)</span></td>
+        <td><span concordion:set="#index">3</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">(null)</span></td>
+        <td><span concordion:set="#index">4</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">(null)</span></td>
+        <td><span concordion:set="#index">5</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">(null)</span></td>
+        <td><span concordion:set="#index">6</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">(null)</span></td>
+        <td><span concordion:set="#index">7</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">(null)</span></td>
+        <td><span concordion:set="#index">8</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">(null)</span></td>
+        <td><span concordion:set="#index">9</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">(null)</span></td>
+        <td><span concordion:set="#index">10</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">(null)</span></td>
+        <td><span concordion:set="#index">11</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">(null)</span></td>
+        <td><span concordion:set="#index">12</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">(null)</span></td>
+    </tr>
+    <tr>
+        <td><span concordion:set="#system">PLACIDUS</span></td>
+        <td><span concordion:assertEquals="getMc(#jdnr, #geoLat, #geoLong, #system)">251.101812</span></td>
+        <td><span concordion:assertEquals="getAscendant(#jdnr, #geoLat, #geoLong, #system)">314.724111</span></td>
+        <td><span concordion:set="#index">1</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">314.724111</span></td>
+        <td><span concordion:set="#index">2</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">16.429143</span></td>
+        <td><span concordion:set="#index">3</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">50.127656</span></td>
+        <td><span concordion:set="#index">4</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">71.101812</span></td>
+        <td><span concordion:set="#index">5</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">88.351511</span></td>
+        <td><span concordion:set="#index">6</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">106.712530</span></td>
+        <td><span concordion:set="#index">7</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">134.724111</span></td>
+        <td><span concordion:set="#index">8</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">196.429143</span></td>
+        <td><span concordion:set="#index">9</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">230.127656</span></td>
+        <td><span concordion:set="#index">10</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">251.101812</span></td>
+        <td><span concordion:set="#index">11</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">268.351511</span></td>
+        <td><span concordion:set="#index">12</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">286.712530</span></td>
+    </tr>
+    <tr>
+        <td><span concordion:set="#system">KOCH</span></td>
+        <td><span concordion:assertEquals="getMc(#jdnr, #geoLat, #geoLong, #system)">251.101812</span></td>
+        <td><span concordion:assertEquals="getAscendant(#jdnr, #geoLat, #geoLong, #system)">314.724111</span></td>
+        <td><span concordion:set="#index">1</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">314.724111</span></td>
+        <td><span concordion:set="#index">2</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">357.524647</span></td>
+        <td><span concordion:set="#index">3</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">41.579502</span></td>
+        <td><span concordion:set="#index">4</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">71.101812</span></td>
+        <td><span concordion:set="#index">5</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">86.933323</span></td>
+        <td><span concordion:set="#index">6</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">106.513680</span></td>
+        <td><span concordion:set="#index">7</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">134.724111</span></td>
+        <td><span concordion:set="#index">8</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">177.524647</span></td>
+        <td><span concordion:set="#index">9</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">221.579502</span></td>
+        <td><span concordion:set="#index">10</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">251.101812</span></td>
+        <td><span concordion:set="#index">11</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">266.933323</span></td>
+        <td><span concordion:set="#index">12</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">286.513680</span></td>
+    </tr>
+    <tr>
+        <td><span concordion:set="#system">PORPHYRI</span></td>
+        <td><span concordion:assertEquals="getMc(#jdnr, #geoLat, #geoLong, #system)">251.101812</span></td>
+        <td><span concordion:assertEquals="getAscendant(#jdnr, #geoLat, #geoLong, #system)">314.724111</span></td>
+        <td><span concordion:set="#index">1</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">314.724111</span></td>
+        <td><span concordion:set="#index">2</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">353.516678</span></td>
+        <td><span concordion:set="#index">3</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">32.309245</span></td>
+        <td><span concordion:set="#index">4</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">71.101812</span></td>
+        <td><span concordion:set="#index">5</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">92.309245</span></td>
+        <td><span concordion:set="#index">6</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">113.516678</span></td>
+        <td><span concordion:set="#index">7</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">134.724111</span></td>
+        <td><span concordion:set="#index">8</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">173.516678</span></td>
+        <td><span concordion:set="#index">9</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">212.309245</span></td>
+        <td><span concordion:set="#index">10</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">251.101812</span></td>
+        <td><span concordion:set="#index">11</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">272.309245</span></td>
+        <td><span concordion:set="#index">12</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">293.516678</span></td>
+    </tr>
+    <tr>
+        <td><span concordion:set="#system">REGIOMONTANUS</span></td>
+        <td><span concordion:assertEquals="getMc(#jdnr, #geoLat, #geoLong, #system)">251.101812</span></td>
+        <td><span concordion:assertEquals="getAscendant(#jdnr, #geoLat, #geoLong, #system)">314.724111</span></td>
+        <td><span concordion:set="#index">1</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">314.724111</span></td>
+        <td><span concordion:set="#index">2</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">19.798443</span></td>
+        <td><span concordion:set="#index">3</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">54.689442</span></td>
+        <td><span concordion:set="#index">4</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">71.101812</span></td>
+        <td><span concordion:set="#index">5</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">83.943215</span></td>
+        <td><span concordion:set="#index">6</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">100.252742</span></td>
+        <td><span concordion:set="#index">7</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">134.724111</span></td>
+        <td><span concordion:set="#index">8</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">199.798443</span></td>
+        <td><span concordion:set="#index">9</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">234.689442</span></td>
+        <td><span concordion:set="#index">10</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">251.101812</span></td>
+        <td><span concordion:set="#index">11</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">263.943215</span></td>
+        <td><span concordion:set="#index">12</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">280.252742</span></td>
+    </tr>
+    <tr>
+        <td><span concordion:set="#system">CAMPANUS</span></td>
+        <td><span concordion:assertEquals="getMc(#jdnr, #geoLat, #geoLong, #system)">251.101812</span></td>
+        <td><span concordion:assertEquals="getAscendant(#jdnr, #geoLat, #geoLong, #system)">314.724111</span></td>
+        <td><span concordion:set="#index">1</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">314.724111</span></td>
+        <td><span concordion:set="#index">2</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">39.430877</span></td>
+        <td><span concordion:set="#index">3</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">61.409171</span></td>
+        <td><span concordion:set="#index">4</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">71.101812</span></td>
+        <td><span concordion:set="#index">5</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">79.411546</span></td>
+        <td><span concordion:set="#index">6</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">92.045106</span></td>
+        <td><span concordion:set="#index">7</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">134.724111</span></td>
+        <td><span concordion:set="#index">8</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">219.430877</span></td>
+        <td><span concordion:set="#index">9</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">241.409171</span></td>
+        <td><span concordion:set="#index">10</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">251.101812</span></td>
+        <td><span concordion:set="#index">11</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">259.411546</span></td>
+        <td><span concordion:set="#index">12</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">272.045106</span></td>
+    </tr>
+    <tr>
+        <td><span concordion:set="#system">EQUAL</span></td>
+        <td><span concordion:assertEquals="getMc(#jdnr, #geoLat, #geoLong, #system)">251.101812</span></td>
+        <td><span concordion:assertEquals="getAscendant(#jdnr, #geoLat, #geoLong, #system)">314.724111</span></td>
+        <td><span concordion:set="#index">1</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">314.724111</span></td>
+        <td><span concordion:set="#index">2</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">344.724111</span></td>
+        <td><span concordion:set="#index">3</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">14.724111</span></td>
+        <td><span concordion:set="#index">4</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">44.724111</span></td>
+        <td><span concordion:set="#index">5</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">74.724111</span></td>
+        <td><span concordion:set="#index">6</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">104.724111</span></td>
+        <td><span concordion:set="#index">7</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">134.724111</span></td>
+        <td><span concordion:set="#index">8</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">164.724111</span></td>
+        <td><span concordion:set="#index">9</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">194.724111</span></td>
+        <td><span concordion:set="#index">10</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">224.724111</span></td>
+        <td><span concordion:set="#index">11</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">254.724111</span></td>
+        <td><span concordion:set="#index">12</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">284.724111</span></td>
+    </tr>
+    <tr>
+        <td><span concordion:set="#system">VEHLOW</span></td>
+        <td><span concordion:assertEquals="getMc(#jdnr, #geoLat, #geoLong, #system)">251.101812</span></td>
+        <td><span concordion:assertEquals="getAscendant(#jdnr, #geoLat, #geoLong, #system)">314.724111</span></td>
+        <td><span concordion:set="#index">1</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">299.724111</span></td>
+        <td><span concordion:set="#index">2</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">329.724111</span></td>
+        <td><span concordion:set="#index">3</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">359.724111</span></td>
+        <td><span concordion:set="#index">4</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">29.724111</span></td>
+        <td><span concordion:set="#index">5</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">59.724111</span></td>
+        <td><span concordion:set="#index">6</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">89.724111</span></td>
+        <td><span concordion:set="#index">7</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">119.724111</span></td>
+        <td><span concordion:set="#index">8</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">149.724111</span></td>
+        <td><span concordion:set="#index">9</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">179.724111</span></td>
+        <td><span concordion:set="#index">10</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">209.724111</span></td>
+        <td><span concordion:set="#index">11</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">239.724111</span></td>
+        <td><span concordion:set="#index">12</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">269.724111</span></td>
+    </tr>
+    <tr>
+        <td><span concordion:set="#system">WHOLESIGN</span></td>
+        <td><span concordion:assertEquals="getMc(#jdnr, #geoLat, #geoLong, #system)">251.101812</span></td>
+        <td><span concordion:assertEquals="getAscendant(#jdnr, #geoLat, #geoLong, #system)">314.724111</span></td>
+        <td><span concordion:set="#index">1</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">300.000000</span></td>
+        <td><span concordion:set="#index">2</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">330.000000</span></td>
+        <td><span concordion:set="#index">3</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">0.000000</span></td>
+        <td><span concordion:set="#index">4</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">30.000000</span></td>
+        <td><span concordion:set="#index">5</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">60.000000</span></td>
+        <td><span concordion:set="#index">6</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">90.000000</span></td>
+        <td><span concordion:set="#index">7</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">120.000000</span></td>
+        <td><span concordion:set="#index">8</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">150.000000</span></td>
+        <td><span concordion:set="#index">9</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">180.000000</span></td>
+        <td><span concordion:set="#index">10</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">210.000000</span></td>
+        <td><span concordion:set="#index">11</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">240.000000</span></td>
+        <td><span concordion:set="#index">12</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">270.000000</span></td>
+    </tr>
+    <tr>
+        <td><span concordion:set="#system">AXIAL</span></td>
+        <td><span concordion:assertEquals="getMc(#jdnr, #geoLat, #geoLong, #system)">251.101812</span></td>
+        <td><span concordion:assertEquals="getAscendant(#jdnr, #geoLat, #geoLong, #system)">314.724111</span></td>
+        <td><span concordion:set="#index">1</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">337.866538</span></td>
+        <td><span concordion:set="#index">2</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">10.377223</span></td>
+        <td><span concordion:set="#index">3</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">41.977890</span></td>
+        <td><span concordion:set="#index">4</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">71.101812</span></td>
+        <td><span concordion:set="#index">5</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">98.762064</span></td>
+        <td><span concordion:set="#index">6</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">127.135152</span></td>
+        <td><span concordion:set="#index">7</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">157.866538</span></td>
+        <td><span concordion:set="#index">8</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">190.377223</span></td>
+        <td><span concordion:set="#index">9</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">221.977890</span></td>
+        <td><span concordion:set="#index">10</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">251.101812</span></td>
+        <td><span concordion:set="#index">11</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">278.762064</span></td>
+        <td><span concordion:set="#index">12</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">307.135152</span></td>
+    </tr>
+    <tr>
+        <td><span concordion:set="#system">HORIZON</span></td>
+        <td><span concordion:assertEquals="getMc(#jdnr, #geoLat, #geoLong, #system)">251.101812</span></td>
+        <td><span concordion:assertEquals="getAscendant(#jdnr, #geoLat, #geoLong, #system)">314.724111</span></td>
+        <td><span concordion:set="#index">1</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">343.336417</span></td>
+        <td><span concordion:set="#index">2</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">13.428472</span></td>
+        <td><span concordion:set="#index">3</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">42.320953</span></td>
+        <td><span concordion:set="#index">4</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">71.101812</span></td>
+        <td><span concordion:set="#index">5</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">100.954352</span></td>
+        <td><span concordion:set="#index">6</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">132.081035</span></td>
+        <td><span concordion:set="#index">7</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">163.336417</span></td>
+        <td><span concordion:set="#index">8</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">193.428472</span></td>
+        <td><span concordion:set="#index">9</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">222.320953</span></td>
+        <td><span concordion:set="#index">10</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">251.101812</span></td>
+        <td><span concordion:set="#index">11</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">280.954352</span></td>
+        <td><span concordion:set="#index">12</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">312.081035</span></td>
+    </tr>
+    <tr>
+        <td><span concordion:set="#system">TOPOCENTRIC</span></td>
+        <td><span concordion:assertEquals="getMc(#jdnr, #geoLat, #geoLong, #system)">251.101812</span></td>
+        <td><span concordion:assertEquals="getAscendant(#jdnr, #geoLat, #geoLong, #system)">314.724111</span></td>
+        <td><span concordion:set="#index">1</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">314.724111</span></td>
+        <td><span concordion:set="#index">2</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">16.410282</span></td>
+        <td><span concordion:set="#index">3</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">49.879082</span></td>
+        <td><span concordion:set="#index">4</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">71.101812</span></td>
+        <td><span concordion:set="#index">5</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">88.890845</span></td>
+        <td><span concordion:set="#index">6</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">107.409409</span></td>
+        <td><span concordion:set="#index">7</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">134.724111</span></td>
+        <td><span concordion:set="#index">8</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">196.410282</span></td>
+        <td><span concordion:set="#index">9</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">229.879082</span></td>
+        <td><span concordion:set="#index">10</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">251.101812</span></td>
+        <td><span concordion:set="#index">11</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">268.890845</span></td>
+        <td><span concordion:set="#index">12</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">287.409409</span></td>
+    </tr>
+    <tr>
+        <td><span concordion:set="#system">ALCABITIUS</span></td>
+        <td><span concordion:assertEquals="getMc(#jdnr, #geoLat, #geoLong, #system)">251.101812</span></td>
+        <td><span concordion:assertEquals="getAscendant(#jdnr, #geoLat, #geoLong, #system)">314.724111</span></td>
+        <td><span concordion:set="#index">1</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">314.724111</span></td>
+        <td><span concordion:set="#index">2</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">354.160244</span></td>
+        <td><span concordion:set="#index">3</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">34.350413</span></td>
+        <td><span concordion:set="#index">4</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">71.101812</span></td>
+        <td><span concordion:set="#index">5</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">91.915857</span></td>
+        <td><span concordion:set="#index">6</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">112.821205</span></td>
+        <td><span concordion:set="#index">7</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">134.724111</span></td>
+        <td><span concordion:set="#index">8</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">174.160244</span></td>
+        <td><span concordion:set="#index">9</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">214.350413</span></td>
+        <td><span concordion:set="#index">10</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">251.101812</span></td>
+        <td><span concordion:set="#index">11</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">271.915857</span></td>
+        <td><span concordion:set="#index">12</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">292.821205</span></td>
+    </tr>
+    <tr>
+        <td><span concordion:set="#system">MORIN</span></td>
+        <td><span concordion:assertEquals="getMc(#jdnr, #geoLat, #geoLong, #system)">251.101812</span></td>
+        <td><span concordion:assertEquals="getAscendant(#jdnr, #geoLat, #geoLong, #system)">314.724111</span></td>
+        <td><span concordion:set="#index">1</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">341.101812</span></td>
+        <td><span concordion:set="#index">2</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">8.762064</span></td>
+        <td><span concordion:set="#index">3</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">37.135152</span></td>
+        <td><span concordion:set="#index">4</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">67.866538</span></td>
+        <td><span concordion:set="#index">5</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">100.377223</span></td>
+        <td><span concordion:set="#index">6</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">131.977890</span></td>
+        <td><span concordion:set="#index">7</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">161.101812</span></td>
+        <td><span concordion:set="#index">8</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">188.762064</span></td>
+        <td><span concordion:set="#index">9</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">217.135152</span></td>
+        <td><span concordion:set="#index">10</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">247.866538</span></td>
+        <td><span concordion:set="#index">11</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">280.377223</span></td>
+        <td><span concordion:set="#index">12</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">311.977890</span></td>
+    </tr>
+    <tr>
+        <td><span concordion:set="#system">KRUSINSKI</span></td>
+        <td><span concordion:assertEquals="getMc(#jdnr, #geoLat, #geoLong, #system)">251.101812</span></td>
+        <td><span concordion:assertEquals="getAscendant(#jdnr, #geoLat, #geoLong, #system)">314.724111</span></td>
+        <td><span concordion:set="#index">1</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">314.724111</span></td>
+        <td><span concordion:set="#index">2</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">337.113096</span></td>
+        <td><span concordion:set="#index">3</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">19.150390</span></td>
+        <td><span concordion:set="#index">4</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">71.101812</span></td>
+        <td><span concordion:set="#index">5</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">100.504899</span></td>
+        <td><span concordion:set="#index">6</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">118.422358</span></td>
+        <td><span concordion:set="#index">7</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">134.724111</span></td>
+        <td><span concordion:set="#index">8</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">157.113096</span></td>
+        <td><span concordion:set="#index">9</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">199.150390</span></td>
+        <td><span concordion:set="#index">10</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">251.101812</span></td>
+        <td><span concordion:set="#index">11</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">280.504899</span></td>
+        <td><span concordion:set="#index">12</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">298.422358</span></td>
+    </tr>
+    <tr>
+        <td><span concordion:set="#system">APC</span></td>
+        <td><span concordion:assertEquals="getMc(#jdnr, #geoLat, #geoLong, #system)">251.101812</span></td>
+        <td><span concordion:assertEquals="getAscendant(#jdnr, #geoLat, #geoLong, #system)">314.724111</span></td>
+        <td><span concordion:set="#index">1</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">314.724111</span></td>
+        <td><span concordion:set="#index">2</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">25.957271</span></td>
+        <td><span concordion:set="#index">3</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">56.511594</span></td>
+        <td><span concordion:set="#index">4</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">71.101812</span></td>
+        <td><span concordion:set="#index">5</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">82.790586</span></td>
+        <td><span concordion:set="#index">6</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">97.818858</span></td>
+        <td><span concordion:set="#index">7</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">134.724111</span></td>
+        <td><span concordion:set="#index">8</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">189.327202</span></td>
+        <td><span concordion:set="#index">9</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">230.686324</span></td>
+        <td><span concordion:set="#index">10</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">251.101812</span></td>
+        <td><span concordion:set="#index">11</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">266.309996</span></td>
+        <td><span concordion:set="#index">12</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">284.294179</span></td>
+    </tr>
+
+
+    </table>
+
+
+<h2>Latitude south, longitude west  (Bueonos Ares 58W27, 34S36</h2>
+
+Used values:<br/>
+jdnr <span concordion:set="#jdnr">2434406.817713</span><br/>
+latitude: <span concordion:set="#geoLat">-34.6</span><br/>
+longitude: <span concordion:set="#geoLong">-58.45</span><br/>
+
+<table>
+    <tr>
+        <th>System</th>
+        <th>MC</th>
+        <th>Asc</th>
+        <th colspan="12">cusps</th>
+    </tr>
+    <tr>
+        <td><span concordion:set="#system">PLACIDUS</span></td>
+        <td><span concordion:assertEquals="getMc(#jdnr, #geoLat, #geoLong, #system)">184.562080</span></td>
+        <td><span concordion:assertEquals="getAscendant(#jdnr, #geoLat, #geoLong, #system)">288.900558</span></td>
+        <td><span concordion:set="#index">1</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">288.900558</span></td>
+        <td><span concordion:set="#index">2</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">310.211429</span></td>
+        <td><span concordion:set="#index">3</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">334.613214</span></td>
+        <td><span concordion:set="#index">4</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">4.562080</span></td>
+        <td><span concordion:set="#index">5</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">40.113613</span></td>
+        <td><span concordion:set="#index">6</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">76.566797</span></td>
+        <td><span concordion:set="#index">7</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">108.900558</span></td>
+        <td><span concordion:set="#index">8</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">130.211429</span></td>
+        <td><span concordion:set="#index">9</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">154.613214</span></td>
+        <td><span concordion:set="#index">10</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">184.562080</span></td>
+        <td><span concordion:set="#index">11</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">220.113613</span></td>
+        <td><span concordion:set="#index">12</span>: <span concordion:assertEquals="getCusp(#index, #jdnr, #geoLat, #geoLong, #system)">256.566797</span></td>
+    </tr>
+    </table>
+
+</body>
+</html>

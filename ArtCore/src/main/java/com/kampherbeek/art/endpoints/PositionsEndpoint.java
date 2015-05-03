@@ -1,8 +1,8 @@
 package com.kampherbeek.art.endpoints;
 
 
-import com.kampherbeek.art.positions.BodyPositionService;
-import com.kampherbeek.art.positions.model.BodyPosition;
+import com.kampherbeek.art.domains.positions.BodyPositionService;
+import com.kampherbeek.art.domains.positions.model.BodyPosition;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;

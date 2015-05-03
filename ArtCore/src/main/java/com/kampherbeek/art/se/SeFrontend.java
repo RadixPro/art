@@ -1,6 +1,5 @@
 package com.kampherbeek.art.se;
 
-import com.kampherbeek.art.houses.model.HouseSystems;
 import swisseph.SwissEph;
 
 
