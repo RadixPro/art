@@ -15,7 +15,7 @@ public class BodyPositionServiceImpl implements BodyPositionService {
     private BodyPositionHandler handler;
 
     @Override
-    public BodyPosition getBodyPosition(String jdnrTxt, String planet, String coordinateSystemTxt) {
+    public BodyPosition getBodyPosition(final String jdnrTxt, final String planet, final String coordinateSystemTxt) {
         double jdnr = Double.parseDouble(jdnrTxt);
         Bodies body = Bodies.valueOf(planet);
         CoordinateSystems coordinateSystem = CoordinateSystems.valueOf(coordinateSystemTxt);

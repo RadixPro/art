@@ -1,5 +1,6 @@
 package com.kampherbeek.art.se;
 
+import com.kampherbeek.art.houses.model.HouseSystems;
 import swisseph.SwissEph;
 
 
@@ -27,6 +28,25 @@ public class SeFrontend {
         double[] results = new double[6];
         swissEph.calc(jdnr, bodyIndex, flags, results);
         return results;
+    }
+
+    public double[] calculateHouses(double jdnr, double geoLat, double geoLong, int houseSystem) {
+        return domificationFromSe(jdnr, geoLat, geoLong, houseSystem, false);
+    }
+
+    public double[] calculateAscMc(double jdnr, double geoLat, double geoLong, int houseSystem) {
+        return domificationFromSe(jdnr, geoLat, geoLong, houseSystem, true);
+    }
+
+    private double[] domificationFromSe(double jdnr, double geoLat, double geoLong, int houseSystem, boolean additional) {
+        double[] cusps = new double[13];
+        double[] ascMc = new double[10];
+        int flags = 0;
+        swissEph.swe_houses(jdnr, flags, geoLat, geoLong, houseSystem, cusps, ascMc);
+        if (additional) {
+            return ascMc;
+        }
+        return cusps;
     }
 
 
