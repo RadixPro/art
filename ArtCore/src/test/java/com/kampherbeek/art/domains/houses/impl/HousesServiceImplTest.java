@@ -7,7 +7,6 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
-import static org.mockito.Matchers.*;
 import org.mockito.Mock;
 import static org.mockito.Mockito.*;
 import org.mockito.runners.MockitoJUnitRunner;
@@ -51,7 +50,7 @@ public class HousesServiceImplTest {
         houses.setMc(longMc);
         houses.setAscendant(longAsc);
         houses.setHouseSystem(HouseSystems.KRUSINSKI);
-        houses.setCusps(new LinkedHashMap<Integer, Double>());
+        houses.setCusps(new LinkedHashMap<>());
         return houses;
     }
 

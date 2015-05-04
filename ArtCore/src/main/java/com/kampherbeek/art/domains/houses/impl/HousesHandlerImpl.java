@@ -7,7 +7,6 @@ import com.kampherbeek.art.se.SeFrontend;
 import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
-import java.util.LinkedHashMap;
 import java.util.Map;
 
 @Component

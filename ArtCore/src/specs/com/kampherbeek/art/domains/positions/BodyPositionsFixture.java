@@ -46,8 +46,7 @@ public class BodyPositionsFixture {
         RestTemplate restTemplate = new RestTemplate();
         String url = "http://localhost:8080/positions/body?jdnr=" + jdnr.trim() + "&body=" + planet.trim() +
                 "&coordinatesystem=" + coordinateSystem.trim();
-        BodyPosition position = restTemplate.getForObject(url, BodyPosition.class);
-        return position;
+        return restTemplate.getForObject(url, BodyPosition.class);
     }
 
 
